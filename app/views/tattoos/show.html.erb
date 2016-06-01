@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @tattoo.title %></h1>
+<h5><%= @tattoo.desc %></h5>
+<%= image_tag @tattoo.image.url(:medium) %>
+
+
+<%= link_to 'Edit', edit_tattoo_path(@tattoo) %> |
+<%= link_to 'Back', root_path %>

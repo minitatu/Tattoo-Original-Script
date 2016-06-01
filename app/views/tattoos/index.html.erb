@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+<div id="video-section">
+  <div class="blur">
+    <video autoplay="true" loop="true">
+        <source src="<%= asset_path 'giphy.mp4' %>" type="video/mp4">
+        <source src="<%= asset_url 'giphy.webm' %>" type="video/webm">
+    </video>
+    <div class="logo"><%= image_tag 'ott_logo.png' %></div>
+    <%#<p class="video-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, inventore tenetur provident aliquam sit dolore perferendis dolorum quis mollitia a quo similique, et aut deleniti nemo doloribus quae id molestias?</p> %>
+  </div>
+</div>
+<div id="tatuador-bio">
+    <div class="row">
+      <div class="col m12 s12 l6 tatuador-desc valign-wrapper">
+          <p class="valign bio-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste ex quae necessitatibus modi saepe obcaecati, impedit aspernatur molestias consectetur, nihil voluptate praesentium sit! Doloremque a, eaque? Voluptatum, officia dolores unde.</p>
+      </div>
+      <div class="col m12 s12 l6 desc-img"><%= image_tag "tatuador.jpg" ,class:"responsive-img"%></div>
+    </div>
+</div>
+<div id="tattoos-gallery" class="row">
+    <center><h1>Ultimos tatuajes realizados</h1></center>
+    <% @tattoos.each do |tattoo| %>
+    <div class="col m6 s6 l4 tattoos">
+        <%= image_tag tattoo.image.url(:medium) %>
+    </div>
+    <% end %>
+</div>
+
+<div id="redes-sociales">
+  <h1>Buscanos en:</h1>
+  <div class="row valign-wrapper">
+      <div class="col m3 s6 l3 center-align"><%= image_tag "facebook.png" ,class:"icon"%></div>
+      <div class="col m3 s6 l3 center-align"><%= image_tag "pinteres.png" ,class:"icon"%></div>
+      <div class="col m3 s6 l3 center-align"><%= image_tag "snapchat.png" ,class:"icon"%></div>
+      <div class="col m3 s6 l3 center-align"><%= image_tag "instagra.png" ,class:"icon"%></div>
+  </div>
+</div>

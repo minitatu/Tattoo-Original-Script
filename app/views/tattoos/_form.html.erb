@@ -1,0 +1,6 @@
+<%= simple_form_for @tattoo do |f| %>
+  <%= f.input :title, label: 'Your title please', error: 'Username is mandatory, please specify one' %>
+  <%= f.input :desc, label: 'Your desc please', error: 'Username is mandatory, please specify one' %>
+  <%= f.input :image, label:'File' ,as: :file %>
+  <%= f.button :submit %>
+<% end %>
